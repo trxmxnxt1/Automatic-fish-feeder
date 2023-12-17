@@ -21,16 +21,6 @@ body, html {
     justify-content: center;
 }
 
-.bg-img:after{
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.174);
-}
-
 .content{
       display: flex;
 }
@@ -84,58 +74,46 @@ body, html {
     margin: 4px 2px;
 }
 
-.btn1{
-    border: none;
-    background-color: white; 
-    color: #FF6633; 
-}
-
-.btn1:hover{
-    background-color: #000000;
-    color: white;
-}
-
-.btn2{
+.btn1 {
     border: none;
     background-color: white;
-    color: #0000CD; 
+    color: #FF6633;
 }
 
-.btn2:hover{
+.btn1:hover {
     background-color: #000000;
     color: white;
 }
 
-.btns{
-    border: none;
-    border-radius: 5px;
-    padding: 10px 31px;
-    background-color: #fffffff5;
-    color: blue;
-    font-size: 16px;
-    font-family: "Poppins", sans-serif;
-    margin: 4px 2px;
-    float: center;
-}
-
-.btn3{
-    border: none;
-    background-color: white; 
-    color: #49108B; 
-}
-
-.btn3:hover{
-    background-color: #000000;
-    color: white;
-}
-
-.btn4{
+.btn2 {
     border: none;
     background-color: white;
-    color: #2D9596; 
+    color: #0000CD;
 }
 
-.btn4:hover{
+.btn2:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.btn3 {
+    border: none;
+    background-color: white;
+    color: #49108B;
+}
+
+.btn3:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.btn4 {
+    border: none;
+    background-color: white;
+    color: #2D9596;
+}
+
+.btn4:hover {
     background-color: #000000;
     color: white;
 }

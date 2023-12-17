@@ -13,22 +13,14 @@ body, html {
 
 .bg-img{
     background : linear-gradient(blue,pink);
-     height: 100vh;
+    height: 100vh;
+    text-align: center;
+    color: #161A30;
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.bg-img:after{
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.174);
 }
 
 .content{
@@ -44,7 +36,7 @@ body, html {
 }
 
 .content p{
-    color: #FF0066;
+    color: #6B240C;
     font-size: 29px;
     font-weight: 600;
     margin: 0 0 35px 0;
@@ -56,7 +48,7 @@ body, html {
     text-align: center;
     padding: 90px 60px;
     background: rgba(255, 255, 255, 0.133);
-    border: 1px solid #fff;
+    border: 1px solid #711DB0;
     backdrop-filter: blur(3px);
     box-shadow: 0 0 6px 0 rgba(29, 29, 29, 0.203);
     margin: 10px;
@@ -67,13 +59,13 @@ body, html {
     text-align: center;
     padding: 90px 60px;
     background: rgba(255, 255, 255, 0.133);
-    border: 1px solid #fff;
+    border: 1px solid #711DB0;
     backdrop-filter: blur(3px);
     box-shadow: 0 0 6px 0 rgba(29, 29, 29, 0.203);
     margin: 10px;
 }
 
-.btn{
+.btn,btns{
     border: none;
     border-radius: 5px;
     padding: 10px 31px;
@@ -84,58 +76,57 @@ body, html {
     margin: 4px 2px;
 }
 
-.btn1{
-    border: none;
-    background-color: white; 
-    color: #FF6633; 
-}
-
-.btn1:hover{
-    background-color: #000000;
-    color: white;
-}
-
-.btn2{
+.btn1 {
     border: none;
     background-color: white;
-    color: #0000CD; 
+    color: #FF6633;
 }
 
-.btn2:hover{
+.btn1:hover {
     background-color: #000000;
     color: white;
 }
 
-.btns{
-    border: none;
-    border-radius: 5px;
-    padding: 10px 31px;
-    background-color: #fffffff5;
-    color: blue;
-    font-size: 16px;
-    font-family: "Poppins", sans-serif;
-    margin: 4px 2px;
-    float: center;
-}
-
-.btn3{
-    border: none;
-    background-color: white; 
-    color: #49108B; 
-}
-
-.btn3:hover{
-    background-color: #000000;
-    color: white;
-}
-
-.btn4{
+.btn2 {
     border: none;
     background-color: white;
-    color: #2D9596; 
+    color: #0000CD;
 }
 
-.btn4:hover{
+.btn2:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.btn3 {
+    border: none;
+    background-color: white;
+    color: #49108B;
+}
+
+.btn3:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.btn4 {
+    border: none;
+    background-color: white;
+    color: #2D9596;
+}
+
+.btn4:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.btn5 {
+    border: none;
+    background-color: white;
+    color: #FF90BC;
+}
+
+.btn5:hover {
     background-color: #000000;
     color: white;
 }

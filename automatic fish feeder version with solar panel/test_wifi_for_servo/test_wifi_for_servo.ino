@@ -11,8 +11,8 @@ LiquidCrystal_I2C LCD = LiquidCrystal_I2C(0x27, 16, 2);
 #define relay2 25
 
 // some var
-const char* ssid = "thiramanat_2.4G";
-const char* password = "newin11111";
+const char* ssid = "Luv";
+const char* password = "12345678";
 
 // create server
 AsyncWebServer server(80);
@@ -33,10 +33,10 @@ void spinner() {
   }
 }
 
-int firstOnTimeHr = 20;
-int firstOnTimeMin = 54;
-int secondOnTimeHr = 20;
-int secondOnTimeMin = 55;
+int firstOnTimeHr = 16;
+int firstOnTimeMin = 39;
+int secondOnTimeHr = 16;
+int secondOnTimeMin = 40;
 
 void printLocalTime() {
   struct tm timeinfo;
@@ -53,10 +53,6 @@ void printLocalTime() {
   LCD.println(&timeinfo, "%d/%m/%Y   %Z");
   // do something here
   
-  pinMode(relay1, OUTPUT);
-  pinMode(relay2, OUTPUT);
-  digitalWrite(relay1, HIGH);
-  digitalWrite(relay2, HIGH);
   
  if (timeinfo.tm_hour == firstOnTimeHr && timeinfo.tm_min == firstOnTimeMin) {
   // First condition: Turn on relay1, turn off relay2
@@ -82,6 +78,10 @@ if (timeinfo.tm_hour == secondOnTimeHr && timeinfo.tm_min == secondOnTimeMin) {
 
 void setup() {
   Serial.begin(115200);
+  pinMode(relay1, OUTPUT);
+  pinMode(relay2, OUTPUT);
+  digitalWrite(relay1, HIGH);
+  digitalWrite(relay2, HIGH);
   pinMode(13, OUTPUT);
   myservo.attach(13, 544, 2400); // Servo
   digitalWrite(13, LOW);
@@ -148,6 +148,14 @@ void setup() {
     digitalWrite(relay1, HIGH);
     request->send(SPIFFS, "/index.html", String(), false); // ลบ processor ออก
   });
+
+  // Route to set GPIO to LOW
+  server.on("/relayoff", HTTP_GET, [](AsyncWebServerRequest * request) {
+    digitalWrite(relay2, HIGH);
+    digitalWrite(relay1, HIGH);
+    request->send(SPIFFS, "/index.html", String(), false); // ลบ processor ออก
+  });
+  
   server.begin();
 
   LCD.clear();

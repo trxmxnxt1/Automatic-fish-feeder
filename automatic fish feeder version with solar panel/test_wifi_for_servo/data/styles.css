@@ -65,6 +65,15 @@ body, html {
     margin: 10px;
 }
 
+@media (max-width: 768px) {
+    /* Add specific styles for smaller screens */
+    .box-left,
+    .box-right {
+        flex: 1;
+        padding: 30px;
+    }
+}
+
 .btn,btns{
     border: none;
     border-radius: 5px;
